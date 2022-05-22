@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vgW-D6-Gdu">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -16,7 +16,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NBA_Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="NBA_Trivia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,12 +104,18 @@
                                                         <color key="tintColor" red="0.66707044858643527" green="0.66475965051170993" blue="0.66925102773338851" alpha="0.60392245867394456" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                        <connections>
+                                                            <action selector="btnA1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OGE-Za-8zt"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcO-ya-OEn" userLabel="buttonA2">
                                                         <rect key="frame" x="204" y="0.0" width="174" height="179"/>
                                                         <color key="tintColor" red="0.66707044858643527" green="0.66475965051170993" blue="0.66925102773338851" alpha="0.60392245867394456" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                        <connections>
+                                                            <action selector="btnA2Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Am4-gc-Yuk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -123,12 +129,18 @@
                                                             <fontDescription key="titleFontDescription" name="CursedTimerULiL" family="Cursed Timer ULiL" pointSize="20"/>
                                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="btnA3Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JcW-Id-Mfc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mag-02-Bb9" userLabel="buttonA4">
                                                         <rect key="frame" x="204" y="0.0" width="174" height="179"/>
                                                         <color key="tintColor" red="0.66707044858643527" green="0.66475965051170993" blue="0.66925102773338851" alpha="0.60392245867394456" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Button" cornerStyle="medium"/>
+                                                        <connections>
+                                                            <action selector="btnA4Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dLl-eE-Nc9"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -211,6 +223,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="67.633928571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c6r-qt-cV1">
+            <objects>
+                <viewController id="vgW-D6-Gdu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTO-6A-und">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uhw-jh-K3i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wX-Ov-FGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="928"/>
         </scene>
     </scenes>
     <resources>

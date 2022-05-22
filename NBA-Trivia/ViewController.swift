@@ -28,10 +28,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var panel_IMG_2: UIImageView!
     
     var lives: [UIImageView]!
-    var game_counter:Int = 0
+    var game_counter:Int = 1
     var score:Int = 0
     var live:Int = 3
     var buttons: [UIButton]!
+    var currentq:Quastion!
     
     
     override func viewDidLoad() {
@@ -54,16 +55,14 @@ class ViewController: UIViewController {
         buttons = [buttonA1, buttonA2, buttonA3, buttonA4]
     }
     
-    func gameflow(){
-            
-            nextQuestion()
 
-    }
-
-
+    /*Next Q Logic*/
+    
     func nextQuestion(){
-        let q = dataManager.data?.allQuestions?[game_counter]
+        let q = dataManager.data?.allQuestions?[game_counter-1]
         panel_IMG_q.loadFrom(URLAddress: q?.imageUrl ?? "")
+        
+        currentq = q
         
         let a = dataManager.data?.allAnswers?.shuffled()
         buttons = buttons.shuffled()
@@ -79,18 +78,61 @@ class ViewController: UIViewController {
         
         buttons[0].setTitle(q?.answer, for: .normal)
 
-        
-        
-       
-        
     }
+   
+    
+    /*Button Init*/
+    
+    @IBAction func btnA1Clicked(_ sender: Any) {
+        checkAnswer(chosenAnswer: buttonA1.currentTitle!)
+    }
+    @IBAction func btnA2Clicked(_ sender: Any) {
+        checkAnswer(chosenAnswer: buttonA2.currentTitle!)
+    }
+    @IBAction func btnA3Clicked(_ sender: Any) {
+        checkAnswer(chosenAnswer: buttonA3.currentTitle!)
+    }
+    @IBAction func btnA4Clicked(_ sender: Any) {
+        checkAnswer(chosenAnswer: buttonA4.currentTitle!)
+    }
+    
+    
+    /*Answer Logic*/
+    
+    func checkAnswer(chosenAnswer:String){
+        if(chosenAnswer == currentq.answer){
+            score+=1
+            panel_LBL_score.text = "\(score)"
+        }else {
+            if (live >= 0){
+                lives[live-1].isHidden = true
+                live-=1
+                
+            }else{
+                exit(0)
+            }
+        }
+        
+        panel_PRB_progress.progress = Float(game_counter)/Float(15)
+        
+        if (game_counter < 15){
+            game_counter+=1
+            panel_LBL_counter.text = "\(game_counter) / 15"
+            nextQuestion()
+        }else{
+            
+        }
+    }
+    
 }
+
+
 
 extension ViewController:Delegate_Data{
     
     func dataRecieved(model: MyData) {
         dataManager.setData(data: model)
-        gameflow()
+        nextQuestion()
     }
 }
 
