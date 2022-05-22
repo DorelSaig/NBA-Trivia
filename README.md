@@ -1,4 +1,4 @@
-# NBA-Trivia
+# :basketball: :basketball: NBA-Trivia :basketball: :basketball:
 
  <p align="center">
 <img src="https://user-images.githubusercontent.com/62397127/169708414-7fef5173-637f-450a-a0dc-d1029bf4bc7c.png"/>
