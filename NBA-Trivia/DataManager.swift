@@ -10,6 +10,8 @@ class DataManager {
     var delegate: Delegate_Data?
     var data: MyData?
     
+    let LAST_SCORE_PREF_KEY = "lastScore"
+    
     func setData(data: MyData?){
         if let d = data {
             self.data = d

@@ -34,6 +34,8 @@ class ViewController: UIViewController {
     var buttons: [UIButton]!
     var currentq:Quastion!
     
+    var lastScore:String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,12 @@ class ViewController: UIViewController {
         panel_LBL_counter.text = "\(game_counter) / 15"
         lives = [panel_IMG_0, panel_IMG_1, panel_IMG_2]
         buttons = [buttonA1, buttonA2, buttonA3, buttonA4]
+        
+        for b in buttons {
+            b .layer.cornerRadius = 20
+            b.clipsToBounds = true
+        }
+
     }
     
 
@@ -71,7 +79,7 @@ class ViewController: UIViewController {
             if(a![i] == q?.answer){
                 buttons[i].setTitle(a![i+1], for: .normal)
             } else {
-            buttons[i].setTitle(a![i], for: .normal)
+                buttons[i].setTitle(a![i], for: .normal)
             }
             
         }
@@ -104,12 +112,12 @@ class ViewController: UIViewController {
             score+=1
             panel_LBL_score.text = "\(score)"
         }else {
-            if (live >= 0){
+            if (live > 0){
                 lives[live-1].isHidden = true
                 live-=1
                 
             }else{
-                exit(0)
+                goToHomePaeg()
             }
         }
         
@@ -120,8 +128,18 @@ class ViewController: UIViewController {
             panel_LBL_counter.text = "\(game_counter) / 15"
             nextQuestion()
         }else{
-            
+            goToHomePaeg()
         }
+    }
+    
+    func saveStringDataToPref(key: String, value: String){
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    
+    func goToHomePaeg(){
+        saveStringDataToPref(key: dataManager.LAST_SCORE_PREF_KEY, value: "\(score)")
+        let homePageViewController = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+        present(homePageViewController, animated: true)
     }
     
 }
