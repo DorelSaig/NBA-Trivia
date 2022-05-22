@@ -13,6 +13,9 @@
 		566BD40028395116008C1717 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566BD3FE28395116008C1717 /* Main.storyboard */; };
 		566BD40228395118008C1717 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 566BD40128395118008C1717 /* Assets.xcassets */; };
 		566BD40528395118008C1717 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 566BD40328395118008C1717 /* LaunchScreen.storyboard */; };
+		566BD41128395510008C1717 /* CursedTimerUlil-Aznm.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 566BD41028395510008C1717 /* CursedTimerUlil-Aznm.ttf */; };
+		566BD4132839894F008C1717 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BD4122839894F008C1717 /* DataManager.swift */; };
+		566BD415283A1CED008C1717 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566BD414283A1CED008C1717 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		566BD40128395118008C1717 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		566BD40428395118008C1717 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		566BD40628395118008C1717 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		566BD41028395510008C1717 /* CursedTimerUlil-Aznm.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CursedTimerUlil-Aznm.ttf"; path = "../../cursed-timer-ulil-font/CursedTimerUlil-Aznm.ttf"; sourceTree = "<group>"; };
+		566BD4122839894F008C1717 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		566BD414283A1CED008C1717 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,12 @@
 				566BD3FA28395116008C1717 /* SceneDelegate.swift */,
 				566BD3FC28395116008C1717 /* ViewController.swift */,
 				566BD3FE28395116008C1717 /* Main.storyboard */,
+				566BD41028395510008C1717 /* CursedTimerUlil-Aznm.ttf */,
 				566BD40128395118008C1717 /* Assets.xcassets */,
 				566BD40328395118008C1717 /* LaunchScreen.storyboard */,
 				566BD40628395118008C1717 /* Info.plist */,
+				566BD4122839894F008C1717 /* DataManager.swift */,
+				566BD414283A1CED008C1717 /* Models.swift */,
 			);
 			path = "NBA-Trivia";
 			sourceTree = "<group>";
@@ -125,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566BD41128395510008C1717 /* CursedTimerUlil-Aznm.ttf in Resources */,
 				566BD40528395118008C1717 /* LaunchScreen.storyboard in Resources */,
 				566BD40228395118008C1717 /* Assets.xcassets in Resources */,
 				566BD40028395116008C1717 /* Main.storyboard in Resources */,
@@ -139,8 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				566BD3FD28395116008C1717 /* ViewController.swift in Sources */,
+				566BD4132839894F008C1717 /* DataManager.swift in Sources */,
 				566BD3F928395116008C1717 /* AppDelegate.swift in Sources */,
 				566BD3FB28395116008C1717 /* SceneDelegate.swift in Sources */,
+				566BD415283A1CED008C1717 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
